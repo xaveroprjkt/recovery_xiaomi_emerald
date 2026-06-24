@@ -48,15 +48,16 @@ AB_OTA_UPDATER := true
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
-    product \
+    vendor_boot \
     system \
+    system_ext \
+    vendor \
+    vendor_dlkm \
+    product \
     vbmeta \
     vbmeta_system \
-    vbmeta_vendor \
-    vendor \
-    vendor_boot
-    
+    vbmeta_vendor
+
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
